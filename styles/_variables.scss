@@ -1,0 +1,24 @@
+$blue: rgba(9, 164, 211, 0.404);
+$correct: rgba(0, 128, 0, 0.459);
+$inCorrect: rgba(255, 24, 24, 0.774);
+$draw: rgba(255, 230, 0, 0.534);
+
+.button {
+    margin-top: 50px;
+    text-align: center;
+    
+    button {
+        height: 45px;
+        padding: 0 15px;
+        outline: none;
+        background: none;
+        border: solid 1px rgb(2, 141, 20);
+        border-radius: 5px;
+        transition: background-color 0.5s;
+    
+        &:hover {
+            background-color: rgba(14, 219, 41, 0.445);
+        }
+    }
+
+}

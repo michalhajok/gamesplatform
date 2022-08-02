@@ -1,0 +1,109 @@
+@import './variables';
+
+.quiz {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    align-items: center;
+    justify-content: center;
+    
+    .button {
+        @extend .button;
+    }
+    
+    .startGame {
+        width: fit-content;
+        justify-self: center;
+        text-align: center;
+        
+        h1 {
+            font-weight: normal;   
+        }
+        
+        .optionList {
+            display: flex;
+            margin: 10px 0 20px 0;
+            
+            .activeOption {
+                background-color: $blue;
+            }
+            
+            div {
+                cursor: pointer;
+                font-size: 20px;
+                margin: 0 10px;
+                padding: 5px 10px;
+                border-radius: 5px;
+                box-shadow: 0 0 3px  black;
+                
+                &:hover {
+                    background-color: $blue;
+                }
+            }
+            
+        }
+    }
+    
+    .duringGame {
+        width: fit-content;
+        justify-self: center;
+        
+        .content {
+            
+            header {
+                display: flex;
+                justify-content: space-around;
+                font-size: 18px;
+            }
+            
+            .question {
+                
+                h1 {
+                    font-weight: normal;
+                }
+            }
+            
+            .answers {
+                display: flex;
+                flex-wrap: wrap;
+                
+                .correctAnswer {
+                    background-color: $correct;
+                }
+                
+                .inCorrectAnswer {
+                    background-color: $inCorrect;
+                }
+                
+                .active:hover {
+                    cursor: pointer;
+                    background-color: $blue;
+                }
+                
+                div {
+                    cursor: default;
+                    border: 1px solid black;
+                    margin: 5px;
+                    padding: 10px;
+                    font-size: 20px;
+                    flex-basis: calc(50% - 10px);
+                }
+            }
+        }
+    }
+    
+    .endGame {
+        width: fit-content;
+        justify-self: center;
+        text-align: center;
+        
+        h1 {
+            font-weight: normal;  
+        }
+        
+        .score {
+            font-size: 20px;
+        }
+    }
+}

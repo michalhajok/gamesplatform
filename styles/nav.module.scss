@@ -1,0 +1,16 @@
+.navbar {
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    background-color: bisque;
+    
+    a {
+        padding: 8px 10px;
+        border-bottom: solid 1px bisque;
+        
+        &:hover {
+            background-color: rgba(218, 150, 68, 0.384);
+            border-bottom: solid 1px black;
+        }
+    }
+}
